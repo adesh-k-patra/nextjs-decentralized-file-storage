@@ -20,8 +20,8 @@ export default async function deductNearEquivalentToOneDollar(
   const newKeyPair = KeyPair.fromRandom("ed25519")
   await account.addKey(
     newKeyPair.getPublicKey(),
-    null,
-    null,
+    undefined,
+    undefined,
     utils.format.parseNearAmount("1")
   )
   await account.sendMoney(recipientId, oneDollarInYoctoNEAR)
